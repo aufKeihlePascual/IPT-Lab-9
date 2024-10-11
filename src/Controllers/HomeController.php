@@ -11,7 +11,7 @@ class HomeController extends BaseController
     {
         $template = 'home';
         $data = [
-            'student' => 'REPLACE THIS WITH YOUR FULL NAME',
+            'student' => 'KEIHLE DIANNE GYRASER L. PASCUAL',
             'title' => 'IPT10 Laboratory Activity #9',
             'college' => 'College of Computer Studies',
             'university' => 'Angeles University Foundation',

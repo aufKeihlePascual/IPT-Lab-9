@@ -7,6 +7,12 @@ use \PDO;
 
 class Supplier extends BaseModel
 {
+    public $company;
+    public $first_name;
+    public $last_name;
+    public $job_title;
+    public $id;
+    
     public function all()
     {
         $sql = "SELECT * FROM suppliers";
@@ -52,11 +58,21 @@ class Supplier extends BaseModel
         return $this->company;
     }
 
+    public function getfirstName()
+    {
+        return $this->first_name;
+    }
+
+    public function getLastName()
+    {
+        return $this->last_name;
+    }
+
     public function getFullName($format = "{first_name} {last_name}")
     {
         $full_name = $format;
         $full_name = str_replace('{first_name}', $this->getFirstName(), $full_name);
-        $full_name = str_replace('{last_name}', $this->geLastName(), $full_name);
+        $full_name = str_replace('{last_name}', $this->getLastName(), $full_name);
         return $full_name;
     }
 }
